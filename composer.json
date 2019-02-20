@@ -1,7 +1,13 @@
 {
-    "name": "payboxmoney/payout",
+    "name": "rsd2302/PayboxPayout",
     "type": "library",
     "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Sergey Astapenko",
+            "email": "sa@paybox.money"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Paybox\\Payout\\": "src/",
@@ -12,10 +18,5 @@
     "require": {
         "php": "^7.0",
         "payboxmoney/cardstorage": "^1.2.0"
-    },
-    "config": {
-        "platform": {
-            "php": "7.0"
-        }
     }
 }
