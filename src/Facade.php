@@ -165,7 +165,7 @@ class Facade extends DataContainer implements PayoutInterface {
      *
      */
 
-    public function getStatus():string {
+    public function getStatus(int $paymentId):string {
         try {
             $this->order->required('id');
             $this->save('api/payment_status', false);
@@ -184,7 +184,7 @@ class Facade extends DataContainer implements PayoutInterface {
      *
      */
 
-    public function getBalance():string {
+    public function getBalance(int $paymentId):string {
         try {
             $this->save('api/balance_status', false);
             $this->send();
