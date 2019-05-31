@@ -23,7 +23,7 @@ use Paybox\Core\ {
  * Simple facade for comfortable using a whole Paybox Payout functionality
  *
  * @package Paybox\Payout
- * @version 1.2.0
+ * @version 1.2.4
  * @copyright LLC Paybox.money
  * @license GPLv3 @link https://www.gnu.org/licenses/gpl-3.0-standalone.html
  *
@@ -165,7 +165,7 @@ class Facade extends DataContainer implements PayoutInterface {
      *
      */
 
-    public function getStatus(int $paymentId):string {
+    public function getStatus():string {
         try {
             $this->order->required('id');
             $this->save('api/payment_status', false);
@@ -184,7 +184,7 @@ class Facade extends DataContainer implements PayoutInterface {
      *
      */
 
-    public function getBalance(int $paymentId):string {
+    public function getBalance():string {
         try {
             $this->save('api/balance_status', false);
             $this->send();
